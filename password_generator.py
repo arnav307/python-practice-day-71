@@ -17,19 +17,26 @@ def password_generator():
         list_of_integer=['0','1','2','3','4','5','6','7','8','9']
         for integer in list_of_integer:
             if integer not in password_of_user:
-                Found=False
+                int_Found=False
             else:
-                Found=True
+                int_Found=True
+        if password_of_user==True:
+            print("weak password, Use integer value too!!")
+        else:
+            print("Weak password, Use special character.")
         
         char_found=False
         special_character=['!','@','#','$','&']
         for character in special_character:
             if character not in password_of_user:
                 char_found=False
-                print("Still Password is to weak!!,use special character")
             else:
                 char_found=True
-   
+        
+        if password_of_user==True:
+            print("Weak password,Try again")
+                
+            
    
     computer_generated=random.choice(['Ae7$1mQ','kdkb3@#','wu@#2323'])
     print(f"Here is your strong password {computer_generated}")
